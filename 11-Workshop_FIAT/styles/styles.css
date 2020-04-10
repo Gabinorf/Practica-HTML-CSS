@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    size: 60px;
+    margin: 20px 20px;
+    color: white;
+    padding-top:20px; 
+}
+
+p{
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: 20px;
+    width: 320px;
+    text-align: justify;
+    color: white;
+}
+
+input{
+    width: 100px;
+    margin: 20px 240px;
+}
+
+.myfiat{
+    background-image: url("../images/442829.jpg");
+    background-size: cover;
+}
+
+.main{
+    height: 600px;
+    width: 100%;
+}

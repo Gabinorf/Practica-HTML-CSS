@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reloj Análogo</title>    
+    <style type="text/css">
+        body{
+            background-color: black;
+            text-align: center;
+        }
+        .reloj{
+            height: 700px;
+            width: 700px;
+            background-color:yellow;
+            
+            border: 15px solid;
+            border-color: white;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
+        
+        .segundos{
+            height: 300px;
+            width: 10px;
+            background-color:blue;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-100%);
+            transform-origin: bottom;
+            z-index: 1;
+            animation: segundos_anim 1s infinite linear; 
+        }
+        .minutos{
+            height: 250px;
+            width: 10px;
+            background-color: red;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-100%);
+            transform-origin: bottom;
+            z-index: 2;
+            animation: minutos_anim 60s infinite linear;
+        }
+        .horas{
+            height: 200px;
+            width: 10px;
+            background-color:green;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-100%);
+            transform-origin: bottom;
+            z-index: 3;
+            animation: horas_anim 3600s infinite linear;
+        }
+        @keyframes segundos_anim{
+            from{ rotateZ(0deg);}
+            to{transform: translate(-50%,-100%) rotateZ(360deg);}    
+        }
+        @keyframes minutos_anim{
+            from{transform: translate(-50%,-100%) rotateZ(0deg);}
+            to{transform: translate(-50%,-100%) rotateZ(360deg);}  
+        }
+        @keyframes horas_anim{
+            from{transform: translate(-50%,-100%) rotateZ(0deg);}
+            to{transform: translate(-50%,-100%) rotateZ(360deg);}     
+        }
+
+    </style>
+</head>
+<body>
+    <div class="reloj">
+        <div class="segundos"></div>
+        <div class="minutos"></div>
+        <div class="horas"></div>
+        <div class="centro"></div>
+    </div>    
+</body>
+</html>
